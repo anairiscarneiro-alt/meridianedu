@@ -19,12 +19,12 @@ if ('scrollRestoration' in history) {
 const translations = {
 
   pt: {
-    'nav.cta': 'Aula grátis',
+    'nav.cta': 'Falar com um Consultor',
 
     'hero.eyebrow': 'Escola de idiomas online',
     'hero.title': 'Fale o idioma que abre <em>a próxima porta da sua vida.</em>',
     'hero.subtitle': 'Aulas ao vivo, 1:1, com professores especializados — em Inglês, Espanhol e Português para Estrangeiros. Mandarim e Francês já estão a caminho.',
-    'hero.cta': 'Agendar Aula Experimental Grátis',
+    'hero.cta': 'Falar com um Consultor',
     'hero.note': 'Sem cartão de crédito · Sem compromisso',
     'hero.trust1': 'Aulas 100% ao vivo',
     'hero.trust2': 'Professores especializados',
@@ -103,12 +103,12 @@ const translations = {
   },
 
   en: {
-    'nav.cta': 'Free lesson',
+    'nav.cta': 'Talk to an Advisor',
 
     'hero.eyebrow': 'Online Language School',
     'hero.title': 'Speak the language that opens <em>the next door in your life.</em>',
     'hero.subtitle': 'Live 1:1 lessons with specialized teachers — in English, Spanish and Portuguese for Foreigners. Mandarin and French are on the way.',
-    'hero.cta': 'Book a Free Trial Lesson',
+    'hero.cta': 'Talk to an Advisor',
     'hero.note': 'No credit card · No commitment',
     'hero.trust1': '100% live lessons',
     'hero.trust2': 'Specialized teachers',
@@ -187,12 +187,12 @@ const translations = {
   },
 
   es: {
-    'nav.cta': 'Clase gratis',
+    'nav.cta': 'Hablar con un Asesor',
 
     'hero.eyebrow': 'Escuela de idiomas online',
     'hero.title': 'Habla el idioma que abre <em>la próxima puerta de tu vida.</em>',
     'hero.subtitle': 'Clases en vivo, 1:1, con profesores especializados — en Inglés, Español y Portugués para Extranjeros. Mandarín y Francés ya están en camino.',
-    'hero.cta': 'Agendar Clase de Prueba Gratis',
+    'hero.cta': 'Hablar con un Asesor',
     'hero.note': 'Sin tarjeta de crédito · Sin compromiso',
     'hero.trust1': 'Clases 100% en vivo',
     'hero.trust2': 'Profesores especializados',
