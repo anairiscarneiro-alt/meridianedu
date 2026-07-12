@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" id="htmlRoot">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meridian — O inglês (e mais idiomas) que te levam pro mundo</title>
-  <meta name="description" content="Aulas ao vivo de Inglês Internacional, Espanhol e Francês (lista de espera). Sem obsessão por sotaque britânico ou americano — foco em te conectar com o mundo inteiro.">
+  <title id="pageTitle">Meridian — Aulas de idiomas ao vivo, com professores especializados</title>
+  <meta name="description" id="pageDescription" content="Aulas particulares ao vivo de Inglês, Espanhol e Português para Estrangeiros. Mandarim e Francês em lista de espera. Agende sua aula experimental grátis.">
 
-  <!-- Fontes: Inter (corpo/sans, estilo Apple/Stripe) + Fraunces (serifa itálica, usada em destaques e na palavra de saudação) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Garante que a página sempre abra no topo, mesmo se a URL tiver ficado
-       com uma âncora (#) de uma visita anterior -->
-  <script>
-    if (window.location.hash) {
-      history.replaceState(null, '', window.location.pathname + window.location.search);
-    }
-  </script>
 </head>
 <body>
 
-  <!-- ========== HEADER / NAV ========== -->
+  <!-- ==========================================================================
+       HEADER — enxuto de propósito (página otimizada para conversão).
+       Sem menu extenso: só logo + um único CTA que se repete pela página.
+       ========================================================================== -->
   <header class="header" id="header">
     <div class="container header__inner">
-
-      <!-- Logo: marca "meridian" + ícone de linha de meridiano (globo com linha horizontal) -->
-      <a href="#" class="logo" aria-label="Meridian — página inicial">
+      <a href="#" class="logo" aria-label="Meridian">
         <svg class="logo__mark" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.6"/>
           <ellipse cx="14" cy="14" rx="4.5" ry="11" stroke="currentColor" stroke-width="1.6"/>
@@ -37,17 +29,9 @@
         <span class="logo__text">meridian</span>
       </a>
 
-      <nav class="nav" id="nav">
-        <a href="#metodologia">Metodologia</a>
-        <a href="#cursos">Idiomas</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <!-- Botão hambúrguer (mobile) -->
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="https://calendly.com/anairiscarneiro" target="_blank" rel="noopener" class="btn btn--primary btn--small" data-i18n="nav.cta">
+        Aula grátis
+      </a>
     </div>
   </header>
 
@@ -55,305 +39,275 @@
 
     <!-- ========== HERO ========== -->
     <section class="hero">
-
-      <!-- Formas orgânicas decorativas, uma por idioma oferecido -->
-      <svg class="hero__blob hero__blob--en" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <svg class="hero__blob hero__blob--a" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path fill="currentColor" d="M45.3,-58.5C58.5,-49.6,68.7,-34.6,72.4,-17.9C76.1,-1.2,73.3,17.2,64.4,31.8C55.5,46.4,40.5,57.2,23.6,63.5C6.7,69.8,-12.1,71.6,-28.7,65.9C-45.3,60.2,-59.7,47,-67.6,30.7C-75.5,14.4,-76.9,-5,-70.5,-21.1C-64.1,-37.2,-49.9,-50,-34.6,-58.5C-19.3,-67,-9.6,-71.2,3.9,-76.1C17.5,-81,32.1,-67.4,45.3,-58.5Z" transform="translate(100 100)"/>
       </svg>
-      <svg class="hero__blob hero__blob--es" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <svg class="hero__blob hero__blob--b" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path fill="currentColor" d="M42.1,-54.5C53.7,-46.5,61.1,-32.1,65.1,-16.5C69.1,-0.9,69.7,15.9,63.2,29.6C56.7,43.3,43.1,53.9,28.1,60.6C13.1,67.3,-3.3,70.1,-19.1,66.5C-34.9,62.9,-50.1,52.9,-59.4,38.9C-68.7,24.9,-72.1,6.9,-68.8,-9.4C-65.5,-25.7,-55.5,-40.3,-42.3,-48.4C-29.1,-56.5,-14.6,-58.1,1.2,-59.7C16.9,-61.3,30.5,-62.5,42.1,-54.5Z" transform="translate(100 100)"/>
       </svg>
 
       <div class="container hero__inner">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Escola de idiomas online</p>
 
-        <p class="eyebrow">Escola de idiomas online · Inglês Internacional, Espanhol e Francês</p>
-
-        <h1 class="hero__title">
-          Diga <span class="greeting-word" id="greetingWord">&ldquo;Hello&rdquo;</span>.<br>
-          <em>E seja entendido em qualquer lugar do mundo.</em>
+        <h1 class="hero__title" data-i18n="hero.title">
+          Fale o idioma que abre <em>a próxima porta da sua vida.</em>
         </h1>
 
-        <!-- Elemento de assinatura: seletor de idiomas que troca a saudação acima -->
-        <div class="lang-switcher" id="langSwitcher" role="tablist" aria-label="Escolha um idioma">
-          <button class="lang-pill is-active" data-lang="en" role="tab" aria-selected="true">
-            <span class="lang-pill__dot lang-pill__dot--en"></span> Inglês
-          </button>
-          <button class="lang-pill" data-lang="es" role="tab" aria-selected="false">
-            <span class="lang-pill__dot lang-pill__dot--es"></span> Espanhol
-          </button>
-          <button class="lang-pill" data-lang="fr" role="tab" aria-selected="false">
-            <span class="lang-pill__dot lang-pill__dot--fr"></span> Francês
-            <span class="lang-pill__badge">lista de espera</span>
-          </button>
-        </div>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Aulas ao vivo, 1:1, com professores especializados — em Inglês, Espanhol e
+          Português para Estrangeiros. Mandarim e Francês já estão a caminho.
+        </p>
 
         <div class="hero__actions">
           <a href="https://calendly.com/anairiscarneiro" target="_blank" rel="noopener" class="btn btn--primary btn--large">
-            Agendar Aula Experimental Grátis
+            <span data-i18n="hero.cta">Agendar Aula Experimental Grátis</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-          <p class="hero__note">Sem cartão de crédito · Cancele quando quiser</p>
+          <p class="hero__note" data-i18n="hero.note">Sem cartão de crédito · Sem compromisso</p>
         </div>
 
+        <ul class="trust-row">
+          <li data-i18n="hero.trust1">Aulas 100% ao vivo</li>
+          <li data-i18n="hero.trust2">Professores especializados</li>
+          <li data-i18n="hero.trust3">Turmas pequenas</li>
+        </ul>
       </div>
     </section>
 
-    <!-- ========== METODOLOGIA ========== -->
-    <section class="section" id="metodologia">
+    <!-- ========== IDIOMAS ========== -->
+    <section class="section section--tint" id="idiomas">
       <div class="container">
-
-        <div class="section__head">
-          <p class="eyebrow">Metodologia</p>
-          <h2 class="section__title">Liberdade pra aprender do seu jeito</h2>
-          <p class="section__subtitle">
-            Quatro etapas simples, sem pacote fechado e sem decoreba de sotaque de livro —
-            <em>focadas em te levar pro mundo real.</em>
-          </p>
-        </div>
-
-        <ol class="steps">
-          <li class="step">
-            <span class="step__number">01</span>
-            <h3 class="step__title">Diagnóstico</h3>
-            <p class="step__text">Avaliamos seu nível, seu objetivo e pra qual lugar do mundo você quer chegar.</p>
-          </li>
-          <li class="step">
-            <span class="step__number">02</span>
-            <h3 class="step__title">Plano sob medida</h3>
-            <p class="step__text">Nada de apostila genérica: montamos uma trilha só sua, no idioma que você escolher.</p>
-          </li>
-          <li class="step">
-            <span class="step__number">03</span>
-            <h3 class="step__title">Aulas ao vivo</h3>
-            <p class="step__text">Conversas de verdade, 1:1, no seu ritmo — pra você se soltar, não decorar regra.</p>
-          </li>
-          <li class="step">
-            <span class="step__number">04</span>
-            <h3 class="step__title">Acompanhamento</h3>
-            <p class="step__text">Relatórios de progresso claros, pra você ver a liberdade de falar acontecendo.</p>
-          </li>
-        </ol>
-
-      </div>
-    </section>
-
-    <!-- ========== CURSOS / IDIOMAS ========== -->
-    <section class="section section--tint" id="cursos">
-      <div class="container">
-
-        <div class="section__head">
-          <p class="eyebrow">Idiomas &amp; Cursos</p>
-          <h2 class="section__title">Escolha o seu idioma</h2>
-          <p class="section__subtitle">Do inglês pro mundo ao espanhol do dia a dia. <em>E o francês já está a caminho.</em></p>
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-i18n="courses.eyebrow">Idiomas</p>
+          <h2 class="section__title" data-i18n="courses.title">Escolha o seu idioma</h2>
+          <p class="section__subtitle section__subtitle--center" data-i18n="courses.subtitle">Aulas 1:1 ao vivo, com professor dedicado ao seu objetivo.</p>
         </div>
 
         <div class="courses">
 
-          <!-- Inglês Geral -->
-          <article class="course-card course-card--en">
+          <!-- Inglês -->
+          <article class="course-card">
             <svg class="course-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
               <ellipse cx="12" cy="12" rx="4" ry="9" stroke="currentColor" stroke-width="1.5"/>
               <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.5"/>
             </svg>
-            <h3 class="course-card__title">Inglês Geral</h3>
-            <p class="course-card__text">Inglês Internacional do zero à fluência — pra viajar, trabalhar e se virar em qualquer lugar do mundo.</p>
-            <span class="course-card__tag">Todos os níveis</span>
+            <h3 class="course-card__title" data-i18n="course.en.title">Inglês</h3>
+            <p class="course-card__text" data-i18n="course.en.text">Do zero à fluência — pra viajar, trabalhar e se comunicar com o mundo todo.</p>
+            <span class="course-card__tag" data-i18n="course.en.tag">Todos os níveis</span>
           </article>
 
-          <!-- Inglês Técnico (Comex & Direito) -->
-          <article class="course-card course-card--en">
-            <svg class="course-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 8L12 3L21 8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M5 8V19M19 8V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M3 19H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M9 11V16M15 11V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <h3 class="course-card__title">Inglês Técnico</h3>
-            <p class="course-card__text">Vocabulário aplicado ao seu mercado — negociações, contratos e comunicação com o mundo todo.</p>
-            <div class="course-card__tags">
-              <span class="course-card__tag">Comex</span>
-              <span class="course-card__tag">Direito</span>
-            </div>
-          </article>
-
-          <!-- Espanhol Geral -->
-          <article class="course-card course-card--es">
+          <!-- Espanhol -->
+          <article class="course-card">
             <svg class="course-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 6C4 4.9 4.9 4 6 4H18C19.1 4 20 4.9 20 6V14C20 15.1 19.1 16 18 16H9L5 19.5V16H6C4.9 16 4 15.1 4 14V6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
               <line x1="8" y1="8.5" x2="16" y2="8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               <line x1="8" y1="11.5" x2="13" y2="11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
-            <h3 class="course-card__title">Espanhol Geral</h3>
-            <p class="course-card__text">Do básico à fluência, com foco em conversa real — ideal pra viagens, negócios e novas amizades.</p>
-            <span class="course-card__tag">Todos os níveis</span>
+            <h3 class="course-card__title" data-i18n="course.es.title">Espanhol</h3>
+            <p class="course-card__text" data-i18n="course.es.text">Conversa real desde a primeira aula — ideal pra viagens, negócios e novas amizades.</p>
+            <span class="course-card__tag" data-i18n="course.es.tag">Todos os níveis</span>
           </article>
 
-          <!-- Francês Geral (Lista de Espera) -->
-          <article class="course-card course-card--fr course-card--waitlist">
+          <!-- Português para Estrangeiros -->
+          <article class="course-card">
             <svg class="course-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 20L6 6C6 4.9 6.9 4 8 4H16C17.1 4 18 4.9 18 6V20" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M6 20H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M9 9H15M9 13H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12 21C12 21 19 15.5 19 10A7 7 0 0 0 5 10C5 15.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/>
             </svg>
-            <h3 class="course-card__title">Francês Geral</h3>
-            <p class="course-card__text">Estamos com turmas em preparação. Entre na lista e seja avisado assim que abrirem as vagas.</p>
+            <h3 class="course-card__title" data-i18n="course.pt.title">Português para Estrangeiros</h3>
+            <p class="course-card__text" data-i18n="course.pt.text">Pra quem chegou ao Brasil e quer viver o dia a dia com naturalidade, não só sobreviver a ele.</p>
+            <span class="course-card__tag" data-i18n="course.pt.tag">Todos os níveis</span>
+          </article>
+
+          <!-- Mandarim (Lista de Espera) -->
+          <article class="course-card course-card--waitlist">
+            <svg class="course-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 6H16M8 18H16M8 6C8 10 16 14 16 18M16 6C16 10 8 14 8 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 class="course-card__title" data-i18n="course.zh.title">Mandarim</h3>
+            <p class="course-card__text" data-i18n="course.zh.text">Turmas em preparação. Entre na lista e seja avisado assim que abrirem as vagas.</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSekLSTggRIFJX0YxnO-8rdlu5gNqTn-_MzCRrDvzgzasXIQCQ/viewform?usp=header" target="_blank" rel="noopener" class="course-card__waitlist-btn">
-              Entrar na lista de espera
+              <span data-i18n="course.waitlist.cta">Entrar na lista de espera</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <!-- Francês (Lista de Espera) -->
+          <article class="course-card course-card--waitlist">
+            <svg class="course-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3V15M12 15L7 10M12 15L17 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 19H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <h3 class="course-card__title" data-i18n="course.fr.title">Francês</h3>
+            <p class="course-card__text" data-i18n="course.fr.text">Turmas em preparação. Entre na lista e seja avisado assim que abrirem as vagas.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSekLSTggRIFJX0YxnO-8rdlu5gNqTn-_MzCRrDvzgzasXIQCQ/viewform?usp=header" target="_blank" rel="noopener" class="course-card__waitlist-btn">
+              <span data-i18n="course.waitlist.cta">Entrar na lista de espera</span>
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </article>
 
         </div>
+      </div>
+    </section>
 
+    <!-- ========== METODOLOGIA ========== -->
+    <section class="section" id="metodologia">
+      <div class="container container--narrow">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-i18n="method.eyebrow">Como funciona</p>
+          <h2 class="section__title" data-i18n="method.title">Simples, direto e sob medida</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__number">01</span>
+            <h3 class="step__title" data-i18n="method.step1.title">Diagnóstico</h3>
+            <p class="step__text" data-i18n="method.step1.text">Avaliamos seu nível e seu objetivo na aula experimental gratuita.</p>
+          </li>
+          <li class="step">
+            <span class="step__number">02</span>
+            <h3 class="step__title" data-i18n="method.step2.title">Aulas ao vivo</h3>
+            <p class="step__text" data-i18n="method.step2.text">Conversas reais, 1:1, no idioma e no ritmo que fazem sentido pra você.</p>
+          </li>
+          <li class="step">
+            <span class="step__number">03</span>
+            <h3 class="step__title" data-i18n="method.step3.title">Acompanhamento</h3>
+            <p class="step__text" data-i18n="method.step3.text">Progresso visível, com feedback constante do seu professor.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- ========== DEPOIMENTOS ========== -->
-    <section class="section" id="depoimentos">
+    <section class="section section--tint" id="depoimentos">
       <div class="container">
-
-        <div class="section__head">
-          <p class="eyebrow">Depoimentos</p>
-          <h2 class="section__title">Quem já fala, recomenda</h2>
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-i18n="testimonials.eyebrow">Depoimentos</p>
+          <h2 class="section__title" data-i18n="testimonials.title">Quem já fala, recomenda</h2>
         </div>
 
         <div class="testimonials">
-
           <figure class="testimonial">
-            <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+            <div class="testimonial__stars" aria-label="5 stars">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
             </div>
-            <blockquote>Fechei um contrato com um fornecedor no Vietnã numa chamada só em inglês. Ninguém ali era nativo — e funcionou perfeitamente.</blockquote>
+            <blockquote data-i18n="testimonial1.quote">Fechei um contrato com um fornecedor no Vietnã numa chamada só em inglês. Ninguém ali era nativo — e funcionou perfeitamente.</blockquote>
             <figcaption>
-              <span class="avatar avatar--en">CM</span>
-              <div>
-                <strong>Carla Mendes</strong>
-                <span>Analista de Comércio Exterior</span>
-              </div>
+              <span class="avatar">CM</span>
+              <div><strong>Carla Mendes</strong><span data-i18n="testimonial1.role">Aluna de Inglês</span></div>
             </figcaption>
           </figure>
 
           <figure class="testimonial">
-            <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+            <div class="testimonial__stars" aria-label="5 stars">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
             </div>
-            <blockquote>Sempre tive vergonha do meu sotaque. Aqui aprendi que o importante é ser entendido — e isso mudou como eu falo em qualquer idioma.</blockquote>
+            <blockquote data-i18n="testimonial2.quote">Sempre tive vergonha do meu sotaque. Aqui aprendi que o importante é ser entendido — e isso mudou como eu falo em qualquer idioma.</blockquote>
             <figcaption>
-              <span class="avatar avatar--es">RT</span>
-              <div>
-                <strong>Rafael Torres</strong>
-                <span>Aluno de Espanhol Geral</span>
-              </div>
+              <span class="avatar">RT</span>
+              <div><strong>Rafael Torres</strong><span data-i18n="testimonial2.role">Aluno de Espanhol</span></div>
             </figcaption>
           </figure>
 
           <figure class="testimonial">
-            <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+            <div class="testimonial__stars" aria-label="5 stars">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0l2.1 4.6L14 5.3l-3.5 3.4.8 4.9L7 11.2 2.7 13.6l.8-4.9L0 5.3l4.9-.7L7 0z"/></svg>
             </div>
-            <blockquote>Fiz o módulo de Inglês Técnico pra Direito e hoje leio contrato internacional sem depender de tradutor. Foco total no que eu realmente uso.</blockquote>
+            <blockquote data-i18n="testimonial3.quote">Me mudei pro Brasil sem falar quase nada de português. Hoje resolvo tudo sozinho — banco, aluguel, até piada com vizinho.</blockquote>
             <figcaption>
-              <span class="avatar avatar--en">JS</span>
-              <div>
-                <strong>Juliana Santos</strong>
-                <span>Advogada</span>
-              </div>
+              <span class="avatar">LO</span>
+              <div><strong>Liam O'Connor</strong><span data-i18n="testimonial3.role">Aluno de Português para Estrangeiros</span></div>
             </figcaption>
           </figure>
-
         </div>
-
       </div>
     </section>
 
     <!-- ========== FAQ ========== -->
     <section class="section section--tint" id="faq">
       <div class="container container--narrow">
-
-        <div class="section__head">
-          <p class="eyebrow">FAQ</p>
-          <h2 class="section__title">Perguntas frequentes</h2>
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 class="section__title" data-i18n="faq.title">Perguntas frequentes</h2>
         </div>
 
         <div class="accordion" id="accordion">
-
           <div class="accordion__item">
             <button class="accordion__trigger" aria-expanded="false">
-              <span>Por que "Inglês Internacional" e não britânico ou americano?</span>
+              <span data-i18n="faq.q1.q">Como funciona a aula experimental gratuita?</span>
               <svg class="accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M8 3V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </button>
             <div class="accordion__panel">
-              <p>Porque a maior parte das conversas em inglês no mundo acontece entre pessoas que não são nativas. Focamos em comunicação real e clareza — não em imitar um sotaque específico — pra você se conectar com qualquer lugar do planeta, não só com Londres ou Nova York.</p>
+              <p data-i18n="faq.q1.a">Você agenda um horário, faz uma breve avaliação de nível com um professor e sai da chamada já com uma sugestão de plano de estudos personalizado. Sem custo e sem compromisso.</p>
             </div>
           </div>
 
           <div class="accordion__item">
             <button class="accordion__trigger" aria-expanded="false">
-              <span>Como funciona a aula experimental gratuita?</span>
+              <span data-i18n="faq.q2.q">Preciso já saber o idioma pra começar?</span>
               <svg class="accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M8 3V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </button>
             <div class="accordion__panel">
-              <p>Você agenda um horário, faz uma breve avaliação de nível com um professor e sai da chamada já com uma sugestão de plano de estudos personalizado. Sem custo e sem compromisso.</p>
+              <p data-i18n="faq.q2.a">Não. Atendemos desde o nível iniciante absoluto até alunos avançados que buscam refinar a fluência.</p>
             </div>
           </div>
 
           <div class="accordion__item">
             <button class="accordion__trigger" aria-expanded="false">
-              <span>Espanhol e Francês funcionam do mesmo jeito que o Inglês?</span>
+              <span data-i18n="faq.q3.q">As aulas são ao vivo ou gravadas?</span>
               <svg class="accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M8 3V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </button>
             <div class="accordion__panel">
-              <p>O Espanhol Geral já está com turmas abertas, no mesmo formato de aulas 1:1 ao vivo. O Francês Geral está em fase de montagem de turma — quem entra na lista de espera é avisado em primeira mão assim que as vagas abrirem.</p>
+              <p data-i18n="faq.q3.a">Todas as aulas são 100% ao vivo, individuais (1:1). Não trabalhamos com conteúdo pré-gravado como método principal.</p>
             </div>
           </div>
 
           <div class="accordion__item">
             <button class="accordion__trigger" aria-expanded="false">
-              <span>Preciso ter algum nível mínimo pra começar?</span>
+              <span data-i18n="faq.q4.q">Quando abrem as turmas de Mandarim e Francês?</span>
               <svg class="accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M8 3V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </button>
             <div class="accordion__panel">
-              <p>Não. Atendemos desde o nível iniciante absoluto até alunos avançados que buscam refinar a fluência pra contextos específicos, como Comex ou Direito.</p>
+              <p data-i18n="faq.q4.a">Estão em fase de montagem de turma. Quem entra na lista de espera é avisado em primeira mão assim que as vagas abrirem.</p>
             </div>
           </div>
 
           <div class="accordion__item">
             <button class="accordion__trigger" aria-expanded="false">
-              <span>Consigo cancelar ou pausar quando quiser?</span>
+              <span data-i18n="faq.q5.q">Consigo cancelar ou pausar quando quiser?</span>
               <svg class="accordion__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M8 3V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </button>
             <div class="accordion__panel">
-              <p>Sim. Não há fidelidade. Você pode pausar, trocar de horário ou cancelar sua assinatura a qualquer momento diretamente pelo painel do aluno.</p>
+              <p data-i18n="faq.q5.a">Sim. Não há fidelidade. Você pode pausar, trocar de horário ou cancelar a qualquer momento.</p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- ========== CTA FINAL ========== -->
     <section class="cta-final" id="cta-final">
       <div class="container">
-        <h2 class="cta-final__title">Sua próxima conversa com o mundo <em>começa aqui.</em></h2>
-        <p class="cta-final__subtitle">Agende sua aula experimental gratuita em Inglês ou Espanhol — ou entre na lista de espera do Francês — e descubra seu plano em 20 minutos.</p>
+        <h2 class="cta-final__title" data-i18n="ctaFinal.title">Sua próxima conversa <em>começa aqui.</em></h2>
+        <p class="cta-final__subtitle" data-i18n="ctaFinal.subtitle">Agende sua aula experimental gratuita e descubra seu plano personalizado em 20 minutos.</p>
         <a href="https://calendly.com/anairiscarneiro" target="_blank" rel="noopener" class="btn btn--primary btn--large">
-          Agendar Aula Experimental Grátis
+          <span data-i18n="hero.cta">Agendar Aula Experimental Grátis</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -363,58 +317,27 @@
 
   </main>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ========== FOOTER MÍNIMO ========== -->
   <footer class="footer">
     <div class="container footer__inner">
-
-      <div class="footer__brand">
-        <a href="#" class="logo" aria-label="Meridian — página inicial">
-          <svg class="logo__mark" width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.6"/>
-            <ellipse cx="14" cy="14" rx="4.5" ry="11" stroke="currentColor" stroke-width="1.6"/>
-            <line x1="3" y1="14" x2="25" y2="14" stroke="currentColor" stroke-width="1.6"/>
-          </svg>
-          <span class="logo__text">meridian</span>
-        </a>
-        <p class="footer__tagline">Idiomas que te levam pro mundo.</p>
-      </div>
-
-      <nav class="footer__col">
-        <h4>Idiomas</h4>
-        <a href="#cursos">Inglês Geral</a>
-        <a href="#cursos">Inglês Técnico</a>
-        <a href="#cursos">Espanhol Geral</a>
-        <a href="#cursos">Francês (lista de espera)</a>
-      </nav>
-
-      <nav class="footer__col">
-        <h4>Escola</h4>
-        <a href="#metodologia">Metodologia</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <div class="footer__col">
-        <h4>Redes</h4>
-        <div class="footer__socials">
-          <a href="#" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="7.5" y1="10" x2="7.5" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7.5" cy="7" r="1" fill="currentColor"/><path d="M11.5 17V10M11.5 13C11.5 11.3 12.7 10 14.2 10C15.7 10 16.5 11 16.5 12.8V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </a>
-          <a href="#" aria-label="YouTube">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 9.5L15 12L10.5 14.5V9.5Z" fill="currentColor"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="container footer__bottom">
-      <p>© <span id="year"></span> Meridian Escola de Idiomas. Todos os direitos reservados.</p>
+      <a href="#" class="logo" aria-label="Meridian">
+        <svg class="logo__mark" width="22" height="22" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.6"/>
+          <ellipse cx="14" cy="14" rx="4.5" ry="11" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="3" y1="14" x2="25" y2="14" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span class="logo__text">meridian</span>
+      </a>
+      <p><span data-i18n="footer.copyright">© <span id="year"></span> Meridian Escola de Idiomas. Todos os direitos reservados.</span></p>
     </div>
   </footer>
+
+  <!-- ========== BARRA DE CTA FIXA (mobile) ========== -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="https://calendly.com/anairiscarneiro" target="_blank" rel="noopener" class="btn btn--primary btn--large sticky-cta__btn">
+      <span data-i18n="hero.cta">Agendar Aula Experimental Grátis</span>
+    </a>
+  </div>
 
   <script src="script.js"></script>
 </body>
